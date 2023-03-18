@@ -41,7 +41,7 @@ function CarouselReact() {
         <Carousel>
         {nowPlayingMovies? (
             nowPlayingMovies.slice(0,4).map((movie, i) => (
-            <Carousel.Item interval={5000} className='carousel_item' key={movie.id}>
+            <Carousel.Item interval={5050} className='carousel_item' key={movie.id}>
                 <div className='carousel_probanding'></div>
                 <img
                 className="d-block w-100 carousel_imgs"

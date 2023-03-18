@@ -1,0 +1,294 @@
+@import '../../scss/variables';
+
+.PageMovie{
+    &_headerContainer{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    &_headerContainer img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &_headerDiv img{
+        width: 300px;
+    }
+    &_headerDiv{
+        position: absolute;
+        top: 0;
+        background: rgb(8,15,40);
+        background: linear-gradient(180deg, rgba(8,15,40,0.9023984593837535) 0%, rgba(8,15,40,0.20772058823529416) 48%, rgba(8,15,40,0.8631827731092436) 83%);
+        height: 100%;
+        width: 100%;
+    }
+    &_InfoDiv{
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        padding: 175px 10% 5% 10%;
+        scale: 0;
+    }
+    &_InfoDiv{
+        animation-name: con4;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes con4{
+        0%{
+            scale: 0;
+        }
+        100%{
+            scale: 1;
+        }
+    }
+    &_InfoImg{
+        height: 350px;
+        width: 300px;
+    }
+    &_InfoImg img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+    &_InfoData{
+        padding: 0 30px;
+        height: 400px;
+        width: 100%;
+    }
+    &_InfoData h2{
+        color: white;
+    }
+    &_InfoData h3{
+        color: $color__plight;
+    }
+    &_InfoVaria{
+        display: flex;
+        width: 30%;
+        justify-content: space-evenly;
+    }
+    &_InfoVaria h4{
+        text-align: center;
+        color: $p__caracter;
+    }
+    &_InfoDataDiv{
+        border-radius: 30px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 3%);  
+        backdrop-filter: blur(5px);
+    }
+    &_InfoDataDiv p{
+        color: white;
+        height: 10em;
+        line-height: 1.5rem;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: 100%;
+    }
+    &_main{
+        height: 100%;
+        width: 100%;
+        padding: 5% 10%;
+    }
+    &_movieContainer{
+        max-width: 1280px;
+        max-height: 720px;
+        width: 100%;
+        height: 100%;
+        display: contents;
+    }
+    &_servers{
+        width: 100%;
+        height: 100px;
+    }
+    &_serversOptions0{
+        width: 100%;
+        height: 50%;
+        background-color: rgb(30, 39, 71);
+    }
+    &_serversOptions0 Button{
+        background-color: #1a6dbb;
+    }
+    &_serversOptions0 Button:first-child{
+        width: 90%;
+        border-radius: 0;
+    }
+    &_serversOptions0 Button:last-child{
+        width: 10%;
+        border-radius: 0;
+    }
+    &_serversOptions1{
+        width: 100%;
+        height: 50%;
+        border-radius: 0;
+    }
+    &_serversOptions1 Button{
+        width: 100% !important;
+        background-color: #1a6dbb;
+    }
+    &_serversOptions1 Button:first-child{
+        width: 90%;
+        border-radius: 0;
+    }
+    &_serversOptions1 Button:last-child{
+        width: 10%;
+        border-radius: 0;
+    }
+    &_serversMainButton{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        padding-left: 5%;
+    }
+    &_serversMainButton h5{
+        margin-bottom: 0;
+    }
+    &_popper{
+        width: 50%;
+    }
+    &_movie{
+        position: relative;
+        padding-bottom: 56.25%; /* 16/9 ratio */
+        padding-top: 30px; /* IE6 workaround*/
+        height: 0;
+        overflow: hidden;
+    }
+    &_movie iframe,
+    &_movie object,
+    &_movie embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+
+    &_thenMovie{
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+    &_similar{
+        width: 75%;
+        height: 100%;
+        padding: 0 15px 0 0;
+    }
+    &_similar h3{
+        color: white;
+        padding: 5% 0;
+    }
+    &_similarMovies{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 2rem;
+    }
+    &_similarMovie{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    &_similarMovie img{
+        max-height: 250px;
+        border-radius: 15px;
+    }
+    &_similarMovie h4{
+        color: white;
+        text-align: center;
+        padding: 10px 10% 0 10%;
+        font-size: 1rem;
+    }
+    &_topics{
+        height: 100%;
+        width: 25%;
+        box-shadow: 0px 0px 5px 1px #1a6dbb;
+        border-radius: 10px;
+        margin: 30px 0;
+    }
+    &_topRank{
+        width: 100%;
+    }
+    &_topRankings{
+        background-color: #1E2747;
+        border-radius: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 45px;
+    }
+    &_topRankings h4{
+        color: $color__plight;
+        font-size: 1.5rem;
+    }
+    &_boxesRankings{
+        width: 100%;
+    }
+    &_boxRankings{
+        width: 100%;
+        height: 125px;
+        background-color: transparent;
+        margin: 15px 0;
+        display: flex;
+    }
+    &_boxRankings img{
+        max-width: 80px;
+        width: 40%;
+        border-radius: 10px;
+        height: 100%;
+    }
+    &_boxInfo{
+        padding: 5%;
+    }
+    &_boxInfo h3{
+        font-size: 1.2rem;
+        color: white;
+    }
+    &_boxVotyDate{
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+    }
+    &_boxVotyDate p{
+        color: white;
+    }
+    &_boxVotyDate p:first-child{
+        color: $p__caracter;
+    }
+    &_boxVotyDate p:last-child{
+        color: black;
+        background-color: $p__caracter;
+        border-radius: 10px;
+    }
+}
+ul#split-button-menu{
+    background-color: #1E2747;
+}
+@media screen and (max-width: 700px){
+    .PageMovie{
+        &_headerDiv img{
+            width: 220px;
+        }
+        &_topics{
+            display: none;
+        }
+        &_InfoData{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+            width: auto;
+            padding: 0;
+        }
+        &_InfoImg img{
+            display: none;
+        }
+    }
+    .serversNames{
+        font-size: 0.8rem;
+    }
+}

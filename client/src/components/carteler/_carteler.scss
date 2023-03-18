@@ -1,0 +1,250 @@
+@import '../../scss/variables';
+
+.cartelera{
+    &_container{
+        display: flex;
+        padding: 0 3%;
+    }
+    &_grilla{
+        height: 100%;
+        width: 75%
+    }
+    &_section{
+        width: 100%;
+        height: 300px;
+        display: flex;
+    }
+    _sectionhide{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    &_section1{
+        display: flex;
+        width: 100%;
+        padding: 5% 0 15px 0;
+        scale: 0;
+        animation-name: con1;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+    &_buttons h2{
+        color: white;
+        font-family: $font__title;
+        font-size: 2rem;
+    }
+        @keyframes con1{
+            20%{
+                scale: 0;
+            }
+            100%{
+                scale: 1;
+            }
+        }
+        &_buttons{
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &_buttonPress{
+            border-bottom: 1px solid #bbbb00 !important;
+            color: white !important;
+            font-size: 1.5rem;
+            transition: color 0.4s, font-size 0.5s;
+        }
+        &_button{
+            color: $color__plight;
+            background-color: transparent;
+            border: none;
+            font-size: 1.2rem;
+            transition: color 0.4s, font-size 0.5s;
+        }
+    &_MoviesCartConta{
+        padding-top: 10px;
+        width: 100%;
+    }
+    &_search{
+        display: flex;
+        justify-content: space-around;
+        height: 40px;
+        width: 250px;
+        align-items: center;
+        border: 1px solid #1E2747;
+        background-color: transparent;
+        border-radius: 20px;
+    }
+    &_form{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    &_form button{
+        border: none;
+        background-color: transparent;
+        padding-right: 10px;
+    }
+    &_search input{
+        background-color: transparent;
+        border: none;
+        padding: 0 0 0 10px;
+        width: 85%;
+        color: white;
+        outline: none;
+    }
+    &_search input::placeholder{
+        color: white;
+    }
+    &_searchIcon{
+        color: white;
+    }
+    &_row{
+        padding: 0 0 20px 0;
+        display: grid;
+        gap: 1rem;
+        grid-auto-rows: 22rem;
+        grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    }
+    &_movies{
+        padding-top: 30px;
+    }
+    &_moviesLink{
+        text-decoration: none;
+    }
+    &_movies img{
+        width: 100%;
+        height: 90%;
+        object-fit: contain;
+        border-radius: 20px;
+    }
+    &_movies h4{
+        color: white;
+        text-align: center;
+        font-size: 1rem;
+        padding: 10px 10% 0 10%;
+    }
+    &_columna{
+        height: 100%;
+        width: 25%;
+        box-shadow: 0px 0px 5px 1px #1a6dbb;
+        margin: 40px 0;
+        border-radius: 10px;
+    }
+    &_rankings{
+        width: 100%;
+    }
+    &_topRankings{
+        background-color: #1E2747;
+        border-radius: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 45px;
+    }
+    &_topRankings h4{
+        color: $color__plight;
+        font-size: 1.5rem;
+    }
+    &_boxesRankings{
+        width: 100%;
+    }
+    &_boxLink{
+        text-decoration: none;
+    }
+    &_boxRankings{
+        width: 100%;
+        height: 125px;
+        background-color: transparent;
+        margin: 15px 0;
+        display: flex;
+    }
+    &_boxRankings img{
+        max-width: 80px;
+        width: 40%;
+        border-radius: 10px;
+        height: 100%;
+    }
+    &_boxInfo{
+        padding: 5%;
+    }
+    &_boxInfo h3{
+        font-size: 1.2rem;
+        color: white;
+    }
+    &_boxVotyDate{
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+    }
+    &_boxVotyDate p{
+        color: white;
+    }
+    &_boxVotyDate p:first-child{
+        color: $p__caracter;
+    }
+    &_boxVotyDate p:last-child{
+        color: black;
+        background-color: $p__caracter;
+        border-radius: 10px;
+    }
+}
+.pagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    &_boxesDisabled{
+        background-color: #1a6dbb;
+        margin: 0 10px;
+        border-radius: 50px;
+    }
+    &_boxes{
+        background-color: #1a6dbb;
+        margin: 0 10px;
+        border-radius: 50px;
+    }
+    &_boxes:hover{
+        background-color: #0b3052;
+        margin: 0 10px;
+        border-radius: 50px;
+    }
+    &_boxes svg:hover{
+        color: white;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .cartelera{
+        &_grilla{
+            width: 100%;
+        }
+        &_rankings{
+            display: none;
+        }
+        &_row{
+            grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+        }
+        &_buttons h2{
+            font-size: 1.5rem;
+        }
+        &_buttonPress{
+            font-size: 1.3rem;
+        }
+        &_button{
+            font-size: 1rem;
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    .cartelera{
+        &_buttons h2{
+            width: 30%;
+        }
+        &_movies img{
+            width: 100%;
+            height: 80%;
+            object-fit: contain;
+            border-radius: 20px;
+        }
+    }
+}

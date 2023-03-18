@@ -1,0 +1,250 @@
+@import '../../scss/variables';
+
+.offcanvas{
+    &_container{
+        height: 100px;
+        padding: 6% 10%;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        transition: 0.5s linear 0.1s;
+    }
+    &_hideItems{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &_hideItems img{
+        width: 300px;
+    }
+    &_buttonMenu{
+        background-color: #080f28;
+        border: 1px solid #1a6dbb;
+    }
+    &_containerItems{
+        height: 100%;
+    }
+    &_items{
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    &_img{
+        flex-grow: 1;
+    }
+    &_img img{
+        width: 250px;
+        height: auto;
+    }
+    &_movies{
+        display: flex;
+        flex-grow: 1;
+    }
+    &_movies Button{
+        color: white;
+        background-color: transparent;
+        border: none;
+        font-size:1rem;
+    }
+    &_movies Button:hover{
+        background-color: transparent;
+        color: #0d6efd;
+    }
+    &_buscRegis{
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-evenly;
+        height: 40px;
+    }
+    &_buscador{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        border: 1px solid #1E2747;
+        background-color: #1E2747;
+        border-radius: 20px;
+    }
+    &_buscador input{
+        background-color: transparent;
+        border: none;
+        padding: 0 0 0 10px;
+        width: 85%;
+        color: white;
+        outline: none;
+    }
+    &_buscador input::placeholder{
+        color: white;
+    }
+    &_buscador button{
+        background-color: transparent;
+        border: none;
+    }
+    &_buscador SearchIcon{
+        padding: 5px 5px 0 0;
+    }
+    &_SearchIcon{
+        color: white;
+    }
+    &_buscRegis Button{
+        max-width: 100px;
+        padding: 0 5px;
+    }
+    &_buscRegis Button:hover{
+        border-radius: 20px;
+    }
+    &_butonEntrar{
+        background-color: transparent;
+        border: none;
+        border-radius: 20px;
+    }
+    &_butonRegis{
+        border-radius: 20px;
+        border: 1px solid #1a6dbb;
+        background-color: transparent;
+    }
+}
+a.dropdown-item{
+    color: white;
+}
+a.dropdown-item:hover{
+    background-color: $color__plight;
+}
+.dropdown-menu.show{
+    background-color: #1E2747;
+}
+.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show{
+    background-color: transparent;
+}
+.btn-group button{
+    background-color: transparent;
+    border: none;
+}
+.btn-close{
+    color: white;
+    background-color: white;
+}
+.hide{
+    &_mobile{
+        background-image: linear-gradient(to right top, #080f28, #071232, #09133c, #0e1346, #17124f, #17124f, #17124f, #17124f, #0e1346, #09133c, #071232, #080f28);
+    }
+    &_header{
+        display: flex;
+        justify-content: center;
+    }
+    &_header img{
+        width: 250px;
+    }
+    &_Body_container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    &_searcher{
+        display: flex;
+        height: 40px;
+        width: 90%;
+        align-items: center;
+        border: 1px solid #1E2747;
+        background-color: transparent;
+        border-radius: 20px;
+    }
+    &_searcher input{
+        background-color: transparent;
+        border: none;
+        padding: 0 0 0 10px;
+        width: 85%;
+        color: white;
+        outline: none;
+    }
+    &_searcher input::placeholder{
+        color: white;
+    }
+    &_searcher button{
+        background-color: transparent;
+        border: none;
+    }
+    &_searcher SearchIcon{
+        padding: 5px 5px 0 0;
+    }
+    &_searcher SearchIcon:hover{
+        width: 30px ;
+        height: 30px ;
+        transition: 0.2s linear 0.1s;
+        color: white;
+    }
+    &_buttons{
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        padding-top: 10%;
+    }
+    &_buttons Button:first-child{
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+    }
+    &_buttons Button:first-child:hover{
+        background-color: #1a6dbb;
+    }
+    &_buttons Button{
+        background-color: #080f28;
+        border: 1px solid #1a6dbb;
+        border-radius: 20px;
+        width: 120px;
+    }
+    &_categories{
+        padding: 15px 0 0 0;
+        &_Inicio{
+            height: 35px;
+            padding: 0px 0 10px 0;
+        }
+        &_line{
+            border-top: 1px solid grey;
+            width: 100%;
+        }
+        &_genres{
+            padding: 15px 0 0 0;
+        }
+        &_genres p{
+            color: white;
+            padding-left: 5px;
+            margin: 3px 0;
+        }
+        &_lists{
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+        &_list ul{
+            list-style: none;
+        }
+        &_list ul button{
+            padding: 8px 0;
+            color: $color__plight
+        }
+        &_list ul button:hover{
+            color: white;
+        }
+    }
+    &_categories button{
+        color: white;
+        background-color: transparent;
+        border: none;
+    }
+    
+}
+
+@media only screen and (max-width: 500px){
+    .offcanvas{
+        &_hideItems img{
+            width: 250px;
+        }
+    }
+}
+@media only screen and (max-width: 400px){
+    .offcanvas{
+        &_hideItems img{
+            width: 200px;
+        }
+    }
+}

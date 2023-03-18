@@ -1,0 +1,35 @@
+@import '../../scss/variables';
+
+.footer{
+    &_container{
+        padding: 6% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &_container p{
+        color: $color__plight;
+        text-align: center;
+    }
+    &_developed p{
+        color: $color__plight;
+        text-align: center;
+        font-size: 2rem;
+    }
+    &_developed p{
+        opacity: 0;
+        transition: opacity 2s linear;
+    }
+    &_developed:hover p{
+        opacity: 1;
+        transition: opacity 2s linear;
+    }
+    &_icons{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+    &_icons img{
+        padding: 0 5%;
+    }
+}

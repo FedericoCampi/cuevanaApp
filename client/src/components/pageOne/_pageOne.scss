@@ -1,0 +1,224 @@
+@import '../../scss/variables';
+
+*{
+    box-sizing: border-box;
+}
+.pageOne{
+    &_container{
+        height: 100%;
+        background-attachment: scroll;
+    }
+    &_Notitle{
+        padding: 0 10%;
+    }
+    &_title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35vh;
+    }
+    &_titleImg img{
+        width: 350px;
+        height: auto;
+    }
+    &_securityIcons{
+        position: absolute;
+        top: 3%;
+        right: 2%;
+        display: flex;
+    }
+    &_securityIcons img{
+        width: 40px;
+        padding: 3px;
+    }
+    &_searcher{
+        padding: 5% 0;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        justify-content: space-around;
+    }
+    &_searchIntro{
+        width: 450px;
+        height: 60px;
+        border-radius: 125px;
+        display: flex;
+        background-color: rgba(255 255 255 / 10%);
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 3% 0 3%;
+        scale: 0;
+    }
+    &_searchIntro{
+        animation-name: con1;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes con1{
+        0%{
+            scale: 0;
+        }
+        100%{
+            scale: 1;
+        }
+    }
+    &_input{
+        background-color: transparent;
+        border: none;
+        height: 100%;
+        font-size: 1rem;
+        color: white;
+        outline: none;
+        width: 90%;
+    }
+    &_input::placeholder{ 
+        color: rgb(255, 255, 255); 
+    }
+    &_SearchIcon:hover{
+        width: 30px ;
+        height: 30px ;
+        transition: 0.2s linear 0.1s;
+        color: white;
+    }
+    &_botonIngreso{
+        text-decoration: none;
+        scale: 0;
+        padding-top: 20px;
+        width: 450px;
+        height: 60px;
+    }
+    &_botonIngreso{
+        animation-name: con2;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards
+    }
+    @keyframes con2{
+        0%{
+            scale: 0;
+        }
+        100%{
+            scale: 1;
+        }
+    }
+    &_botonIngreso Button{
+        text-decoration: none !important; 
+        width: 100%;
+        height: 60px;
+        background-color: #1a6dbb;
+        font-size: 1rem;
+        display: inline-flex;
+        justify-content: center;
+        border-radius: 40px;
+        color: #fff;
+        border: none;
+        font-family: $font_p;
+    }
+    &_searcher Button{
+        border-radius: 40px;
+    }
+    &_content{
+        box-shadow: 0px 0px 5px 1px #1a6dbb;
+        margin: 30px 3%;
+        background-color: $main__bg;
+        border-radius: 5px;
+        scale: 0;
+    }
+    &_content{
+        animation-name: con3;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes con3{
+        0%{
+            scale: 0;
+        }
+        100%{
+            scale: 1;
+        }
+    }
+    &_content_info{
+        padding: 5% 7%
+    }
+    &_content_info h3{
+        font-family: 'Oxygen', sans-serif;
+        font-size: 80px;
+        color: #fff;
+        text-align: start;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #06386a, 
+        0 0 20px #062d53, 0 0 25px rgb(1, 25, 49), 0 0 30px #001020, 0 0 35px #001020;
+    }
+    &_content_info h4{
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+        color: white;
+        font-family: $font_p;
+    }
+    &_content_info p{
+        font-size: 1.3rem;
+        color: $color__plight;
+        font-family: $font_p;
+    }
+}
+@media(min-width: 650px){
+    .pageOne{
+        &_titleImg img{
+                width: 450px;
+                height: auto;
+            }
+        &_content{
+            margin: 30px 6%;;
+        }
+    }
+}
+// @media(min-width: 650px){
+//     .pageOne{
+//         &_titleImg img{
+//             width: 450px;
+//             height: auto;
+//         }
+//         &_searchIntro{
+//             width: 350px;
+//             justify-content: space-between;
+//             padding: 0 2% 0 3%;
+//         }
+//         &_botonIngreso{
+//             width: 350px;
+//         }
+//     }
+// }
+// @media(min-width: 900px){
+//     .pageOne{
+//         &_searchIntro{
+//             width: 450px;
+//             justify-content: space-between;
+//             padding: 0 2% 0 3%;
+//         }
+//         &_botonIngreso Button{
+//             width: 450px;
+//         }
+//     }
+// }
+// @media(min-width: 1000px){
+//     .pageOne{
+//         &_Notitle{
+//             padding: 0 20%;
+//         }
+//         &_searcher{
+//             height: 200px;
+//             justify-content: space-between;
+//         }
+//     }
+// }
+// @media(min-width: 1200px){
+//     .pageOne{
+//         &_searcher{
+//             height: 200px;
+//             justify-content: space-around;
+//             padding: 3% 0;
+//         }
+//     }
+// }

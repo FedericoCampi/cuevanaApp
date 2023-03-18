@@ -1,0 +1,111 @@
+@import '../../scss/variables';
+
+.carousel{
+    &_imgs{
+        height: 100vh;
+        object-fit: cover;
+    }
+    &_probanding{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(8,15,40);
+        background: linear-gradient(19deg, rgba(8,15,40,0.7063200280112045) 0%, rgba(37,14,90,0.34217436974789917) 49%, rgba(8,15,40,0.7511379551820728) 100%);
+    }
+    &_info{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 6%;
+        text-align: start;
+    }
+    &_animated{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 6%;
+        text-align: start;
+        scale: 0;
+    }
+    &_animated{
+        animation-name: con3;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes con3{
+        0%{
+            scale: 0;
+        }
+        100%{
+            scale: 1;
+        }
+    }
+    &_info_title{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    &_info_title h3{
+        text-align: start;
+        font-size: 3rem;
+        font-family: $font__title;
+    }
+    &_info_title p{
+        text-align: start;
+        margin: 2% 1%;
+        color: black;
+    }
+    &_info_popup{
+        display: flex;
+        align-items: center;
+    }
+    &_info_popup p{
+        padding: 0 1%;
+        color: black;
+    }
+    &_info_popup p:first-child{
+        padding: 0 1%;
+        color: white;
+    }
+    &_boton{
+        color: black;
+        background-color: $p__caracter;
+        border-radius: 10px;
+        padding: 2px
+    }
+    &_info_p p{
+        text-align: start;
+        font-family: $font_p;
+        color: $color__plight;
+    }
+    &_goToMovie{
+        text-decoration: none;
+    }
+    &_goToMovie Button{
+        width: 150px;
+        display: flex;
+        justify-content: space-evenly;
+        border-radius:20px;
+        background-color: #080f28;
+        border: 1px solid #1a6dbb;
+    }
+    &_goToMovie p{
+        margin-bottom: 0;
+    }
+}
+@media only screen and (max-width: 500px){
+    .carousel{
+        &_info{
+            padding-bottom: 20%;
+            &_title h3{
+                font-size: 2.5rem;
+            }
+        }
+        &_info p{
+            font-size: 0.8rem;
+        }
+        &_info_p p{
+            display: none;
+        }
+    }
+}

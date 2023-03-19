@@ -41,7 +41,7 @@
         justify-content: space-around;
     }
     &_searchIntro{
-        width: 450px;
+        width: 300px;
         height: 60px;
         border-radius: 125px;
         display: flex;
@@ -86,7 +86,7 @@
         text-decoration: none;
         scale: 0;
         padding-top: 20px;
-        width: 450px;
+        width: 300px;
         height: 60px;
     }
     &_botonIngreso{
@@ -145,7 +145,7 @@
     }
     &_content_info h3{
         font-family: 'Oxygen', sans-serif;
-        font-size: 80px;
+        font-size: 50px;
         color: #fff;
         text-align: start;
         text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #06386a, 
@@ -165,12 +165,21 @@
 }
 @media(min-width: 650px){
     .pageOne{
+        &_searchIntro{
+            width: 450px;
+        }
+        &_botonIngreso{
+            width: 450px;
+        }
         &_titleImg img{
                 width: 450px;
                 height: auto;
             }
         &_content{
             margin: 30px 6%;;
+        }
+        &_content_info h3{
+            font-size: 80px;
         }
     }
 }

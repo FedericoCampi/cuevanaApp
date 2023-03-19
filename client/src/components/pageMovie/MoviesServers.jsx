@@ -203,7 +203,9 @@ const MoviesServers = () => {
     const optionsServers = [optionServer1(),optionServer2(), optionServer3()]
     const idTrailer = 'https://www.youtube-nocookie.com/embed/' + trailerYoutube[0].videoId
     
-return (
+    return (
+    <>
+    {linksMovie ? (
     <div className='PageMovie_movieContainer'>
             <div className='PageMovie_servers'>
                 <ButtonGroup variant="contained" ref={anchorRef} aria-label="split button" className='PageMovie_serversOptions0'onClick={handleToggle}>
@@ -319,7 +321,9 @@ return (
                 }
             </div>
         </div>
-)
+    ) : null}
+    </>
+    )
 }
 
 export default MoviesServers

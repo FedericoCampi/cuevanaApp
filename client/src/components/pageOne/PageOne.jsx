@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import image from '../../images/cueva-remove.png';
 import SearchIcon from '@mui/icons-material/Search';
-import ok from '../../images/icons/verify.png'
 import security from '../../images/icons/globe-grid.png'
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
@@ -31,7 +30,6 @@ const PageOne = () => {
         <div className='pageOne_container '>
             <div className='pageOne_title'>
                 <div className='pageOne_securityIcons'>
-                    <img src={ok} alt='security'/>
                     <img src={security} alt='security'/>
                 </div>
                 <div className='pageOne_titleImg'>
